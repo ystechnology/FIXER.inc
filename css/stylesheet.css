@@ -20,7 +20,7 @@ header .header_logo {
 
 header .header_menu {
   padding-right: 30px;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .cop {
@@ -81,7 +81,6 @@ header .header_menu {
 
 .service {
   width: 100%;
-  height: 100vh;
 }
 
 .service .service_fv {
