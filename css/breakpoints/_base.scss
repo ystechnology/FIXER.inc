@@ -1,0 +1,250 @@
+@import "mixin";
+
+html {
+  font-family: 'Noto Serif JP', serif;
+  }
+
+header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 70px;
+  .header_logo {
+    padding-left: 10px;
+    font-weight: bold;
+  }
+  .header_menu {
+    padding-right: 10px;
+  }
+}
+
+.cop {
+  height: 50vh;
+  background-image: url(../img/c_fv.jpg);
+  background-size: cover;
+  .cop_fv {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+  .cop_text {
+    font-weight: bold;
+    padding-top: 7px;
+    padding-left: 15px;
+  }
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  .about_fv {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 5px;
+  }
+  .about_detail {
+    width: 90%;
+    height: 500px;
+    margin: 30px auto;
+    background-color: #eaebe6;
+    .about_img {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .about_title {
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 20px;
+      text-align: center;
+      color: rgb(59, 61, 59);
+    }
+    .about_text {
+      padding-left: 30px;
+      padding-top: 50px;
+      line-height: 30px;
+    }
+  }
+}
+
+.service {
+  width: 100%;
+  height: 100vh;
+  .service_fv {
+    font-size: 25px;
+    padding-left: 5px;
+  }
+  .service_content {
+    .service_title {
+      padding-top: 20px;
+      padding-left: 10px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .service_img {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(161, 161, 153);
+      }
+      &.inview {
+        &::after {
+          @include animation(
+            $name: kf-service-img,
+            $duration: 1.6s,
+            $timing-function: ease-in-out
+            );
+        }
+      }
+    }
+  }
+  .service_text {
+    padding-top: 5px;
+    font-size:15px;
+  }
+}
+// ---------------------------------
+@keyframes kf-service-img {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+// ---------------------------------
+
+.img_move {
+  opacity: 0;
+  .inview & {
+    opacity: 1;
+    transition: transform 0.3s ease;
+    @include animation(
+      $name: kf-img-show,
+      $duration: 1.6s,
+      $timing-function: ease-in-out,
+      $fill-mode: normal
+      );
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100%{
+  opacity: 1;
+  }
+}
+
+.hover-d {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+    &:hover::before {
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.detail {
+  width: 100%;
+  height: 50vh;
+
+  .detail_fv {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 5px;
+  }
+  .detail_text {
+    width: 90%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #eaebe6;
+    padding-left: 15px;
+    padding-top: 20px;
+    line-height: 30px;
+  }
+}
+
+.contact {
+  width: 100%;
+  height: 150px;
+  background-color: gray;
+  .contact_text {
+    text-align: center;
+  }
+  .contact_select {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    // &--twitter {
+    //   padding-left: 20px;
+    // }
+    // &--facebook {
+    //   padding-left: 20px;
+    // }
+    // &--gmail {
+    //   padding-left: 20px;
+    // }
+  }
+}
+
+
+.footer {
+  width: 100%;
+  .footer_content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    .footer_title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .nav {
+      padding-top: 30px;
+    }
+  }
+}
