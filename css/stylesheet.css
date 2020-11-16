@@ -20,7 +20,7 @@ header .header_logo {
 
 header .header_menu {
   padding-right: 30px;
-  font-size: 2px;
+  font-size: 10px;
 }
 
 .cop {
@@ -256,7 +256,6 @@ img {
 
 .detail {
   width: 100%;
-  height: 50vh;
 }
 
 .detail .detail_fv {
@@ -273,28 +272,6 @@ img {
   padding-left: 15px;
   padding-top: 20px;
   line-height: 30px;
-}
-
-.contact {
-  width: 100%;
-  height: 150px;
-  background-color: gray;
-}
-
-.contact .contact_text {
-  text-align: center;
-}
-
-.contact .contact_select {
-  width: 30%;
-  margin: 0 auto;
-  padding-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .footer {
