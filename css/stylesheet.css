@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: 'Noto Serif JP', serif;
 }
@@ -45,7 +46,6 @@ header .header_menu {
 
 .about {
   width: 100%;
-  height: 100vh;
 }
 
 .about .about_fv {
@@ -56,7 +56,6 @@ header .header_menu {
 
 .about .about_detail {
   width: 90%;
-  height: 500px;
   margin: 30px auto;
   background-color: #eaebe6;
 }
@@ -69,14 +68,12 @@ header .header_menu {
 .about .about_detail .about_title {
   font-size: 18px;
   font-weight: bold;
-  padding-top: 20px;
-  text-align: center;
   color: #3b3d3b;
 }
 
-.about .about_detail .about_text {
-  padding-left: 30px;
-  padding-top: 50px;
+.about .about_detail .about_title--text {
+  font-size: 12px;
+  padding-top: 30px;
   line-height: 30px;
 }
 
@@ -293,5 +290,124 @@ img {
 
 .footer .footer_content .nav {
   padding-top: 30px;
+}
+
+@media (min-width: 480px) {
+  /******************************************************************
+
+Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 600px) {
+  /******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 960px) {
+  /******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+  header {
+    height: 100px;
+    line-height: 100px;
+  }
+  header .header_logo {
+    padding-left: 20px;
+  }
+  header .header_menu {
+    padding-right: 50px;
+  }
+  .cop {
+    height: 100vh;
+  }
+  .cop .cop_fv {
+    font-size: 50px;
+    padding-top: 70px;
+    padding-left: 50px;
+  }
+  .cop .cop_text {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 80px;
+  }
+  .about .about_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .about .about_detail {
+    width: 90%;
+    height: 500px;
+    margin: 30px auto;
+    background-color: #eaebe6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about .about_detail .about_img {
+    width: 49%;
+  }
+  .about .about_detail .about_title {
+    padding-top: 40px;
+    font-size: 25px;
+  }
+  .about .about_detail .about_title--text {
+    padding-top: 40px;
+    line-height: 40px;
+    font-size: 15px;
+  }
+  .service .service_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .service .service_content {
+    width: 90%;
+    margin: 100px auto;
+  }
+  .service .service_content .service_title {
+    width: 70%;
+    margin: 50px auto;
+  }
+  .service .service_content .service_img {
+    width: 70%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  .service .service_content .service_text {
+    width: 70%;
+    margin: 50px auto;
+  }
+  .detail .detail_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .detail .detail_text {
+    width: 80%;
+    height: 300px;
+    line-height: 40px;
+    margin-top: 50px;
+  }
+  .footer .footer_content {
+    line-height: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
 }
 /*# sourceMappingURL=stylesheet.css.map */
