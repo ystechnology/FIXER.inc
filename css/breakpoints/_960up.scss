@@ -9,6 +9,7 @@ header {
   line-height: 100px;
   .header_logo {
     padding-left: 20px;
+    font-size: 30px;
   }
   .header_menu {
     padding-right: 50px;
@@ -37,7 +38,7 @@ header {
   }
   .about_detail {
     width: 90%;
-    height: 500px;
+    height: 400px;
     margin: 30px auto;
     background-color: #eaebe6;
     display: flex;
@@ -78,6 +79,8 @@ header {
     .service_text {
       width: 70%;
       margin: 50px auto;
+      line-height: 40px;
+
     }
   }
 }
@@ -90,7 +93,7 @@ header {
   }
   .detail_text {
     width: 80%;
-    height: 300px;
+    height: 310px;
     line-height: 40px;
     margin-top: 50px;
   }
@@ -103,3 +106,24 @@ header {
     margin-bottom: 50px;
   }
 }
+
+.big {
+  font-size: 50px;
+}
+
+.header_ul {
+  display: flex;
+  .header_li {
+    margin-right: 30px;
+  }
+}
+
+.header_nav {
+  display: block;
+}
+
+.mobile-menu {
+  &__btn {
+      display: none;
+    }
+  }
