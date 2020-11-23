@@ -9,40 +9,6 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
 
-  <!-- スライドショー -->
-	<script type="text/javascript">
-		function slideSwitch() {
-			var $active = $('#slideshow img.active');
-			if ( $active.length == 0 ) $active = $('#slideshow img:last');
-			var $next =  $active.next().length ? $active.next()
-			    : $('#slideshow img:first');
-			$active.addClass('last-active');
-			$next.css({opacity: 0.0})
-			    .addClass('active')
-			    .animate({opacity: 1.0}, 1000, function() {
-			        $active.removeClass('active last-active');
-			    });
-		}
-      window.addEventListener('DOMContentLoaded', function(){
-		    setInterval( "slideSwitch()", 5000 );
-		});
-
-	</script>
-
-    <!-- ＃リンクのスムーズスクロール -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function(){
-        $('a[href^="#"]').click(function() {
-          var speed = 500;
-          var href= $(this).attr("href");
-          var target = $(href == "#" || href == "" ? 'html' : href);
-          var position = target.offset().top;
-          $('body,html').animate({scrollTop:position}, speed, 'swing');
-          return false;
-        });
-      });
-    </script>
-
   <title>FIXER.inc</title>
 </head>
 <body>
@@ -203,6 +169,40 @@
     </ul>
   </nav>
 </div>
+
+  <!-- スライドショー -->
+	<script type="text/javascript">
+		function slideSwitch() {
+			var $active = $('#slideshow img.active');
+			if ( $active.length == 0 ) $active = $('#slideshow img:last');
+			var $next =  $active.next().length ? $active.next()
+			    : $('#slideshow img:first');
+			$active.addClass('last-active');
+			$next.css({opacity: 0.0})
+			    .addClass('active')
+			    .animate({opacity: 1.0}, 1000, function() {
+			        $active.removeClass('active last-active');
+			    });
+		}
+      window.addEventListener('DOMContentLoaded', function(){
+		    setInterval( "slideSwitch()", 5000 );
+		});
+
+	</script>
+
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+        $('a[href^="#"]').click(function() {
+          var speed = 500;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
   <script src="js/hb.js"></script>
   <script src="js/font_animation.js"></script>
 
