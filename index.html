@@ -8,6 +8,28 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+  <!-- スライドショー -->
+	<script type="text/javascript">
+		function slideSwitch() {
+			var $active = $('#slideshow img.active');
+			if ( $active.length == 0 ) $active = $('#slideshow img:last');
+			var $next =  $active.next().length ? $active.next()
+			    : $('#slideshow img:first');
+			$active.addClass('last-active');
+			$next.css({opacity: 0.0})
+			    .addClass('active')
+			    .animate({opacity: 1.0}, 1000, function() {
+			        $active.removeClass('active last-active');
+			    });
+		}
+
+		$(function() {
+		    setInterval( "slideSwitch()", 5000 );
+		});
+
+	</script>
+
     <!-- ＃リンクのスムーズスクロール -->
     <script>
       $(function(){
@@ -21,7 +43,6 @@
         });
       });
     </script>
-
   <title>FIXER.inc</title>
 </head>
 <body>
@@ -51,12 +72,17 @@
         </header>
 
     <div class="cop">
-      <div class="cop_fv">
+      <p id="slideshow">
+        <img src="../img/fv_01.jpg" width="100%" height="100%" class="active">
+        <img src="../img/fv_02.jpg" width="100%" height="100%">
+        <img src="../img/fv_03.jpg" width="100%" height="100%">
+     </p>
+      <!-- <div class="cop_fv">
         Follow your dream
-      </div>
-      <div class="cop_text">
+      </div> -->
+      <!-- <div class="cop_text">
         We influence and change the world
-      </div>
+      </div> -->
     </div>
 
     <div id="1">
@@ -83,7 +109,7 @@
   <div id="2">
     <div class="service">
       <div class="service_fv">
-        <h1><span class="big">S</span>evice
+        <h1><span class="big">S</span>ervice
       </div>
 
       <div class="service_content">
@@ -178,6 +204,8 @@
   </nav>
 </div>
   <script src="js/hb.js"></script>
+  <script src="js/font_animation.js"></script>
+
 
 </body>
 </html>
