@@ -25,7 +25,7 @@ class MobileMenu {
 new MobileMenu();
 
 
-$(function() {
+window.addEventListener('DOMContentLoaded', function(){
   $("#panel-btn").click(function() {
     $("#panel").fadeToggle(500);
     $("#panel-btn-icon").toggleClass("close");

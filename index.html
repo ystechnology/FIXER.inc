@@ -23,7 +23,7 @@
 			        $active.removeClass('active last-active');
 			    });
 		}
-		$(function() {
+      window.addEventListener('DOMContentLoaded', function(){
 		    setInterval( "slideSwitch()", 5000 );
 		});
 
@@ -31,7 +31,7 @@
 
     <!-- ＃リンクのスムーズスクロール -->
     <script>
-      $(function(){
+        window.addEventListener('DOMContentLoaded', function(){
         $('a[href^="#"]').click(function() {
           var speed = 500;
           var href= $(this).attr("href");
