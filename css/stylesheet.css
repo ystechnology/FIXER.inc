@@ -245,7 +245,7 @@ img {
 
 .detail .detail_text {
   width: 90%;
-  height: 300px;
+  height: 320px;
   margin: 20px auto;
   background-color: #eaebe6;
   padding-left: 15px;
@@ -522,29 +522,6 @@ img {
   display: none;
 }
 
-#slideshow {
-  position: relative;
-  width: 640px;
-  height: 270px;
-}
-
-#slideshow img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 8;
-  opacity: 0.0;
-}
-
-#slideshow img.active {
-  z-index: 10;
-  opacity: 1.0;
-}
-
-#slideshow img.last-active {
-  z-index: 9;
-}
-
 .service_text {
   margin: 50px 0;
   font-weight: bold;
@@ -582,6 +559,11 @@ img {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
 }
 
 @media (min-width: 480px) {

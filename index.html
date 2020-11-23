@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/reset.css"/>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+        $('a[href^="#"]').click(function() {
+          var speed = 500;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+
 
   <title>FIXER.inc</title>
 </head>
@@ -38,11 +54,21 @@
         </header>
 
     <div class="cop">
-      <p id="slideshow">
-        <img src="../img/fv_01.jpg" width="100%" height="100%" class="active">
-        <img src="../img/fv_02.jpg" width="100%" height="100%">
-        <img src="../img/fv_03.jpg" width="100%" height="100%">
-     </p>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/fv_01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/FV_02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/FV_03.jpg" alt="">
+            </div>
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+    </div>
       <!-- <div class="cop_fv">
         Follow your dream
       </div> -->
@@ -127,6 +153,7 @@
           　　　　　　東京都港区芝大門2-1-18GSハイム芝大門708</br>
           代表取締役　岩切大和</br>
           事業内容　　貿易事業/インターネット広告/キャスティング</br>
+          主要銀行　　みずほ銀行
       </div>
     </div>
   </div>
@@ -170,39 +197,8 @@
   </nav>
 </div>
 
-  <!-- スライドショー -->
-	<script type="text/javascript">
-		function slideSwitch() {
-			var $active = $('#slideshow img.active');
-			if ( $active.length == 0 ) $active = $('#slideshow img:last');
-			var $next =  $active.next().length ? $active.next()
-			    : $('#slideshow img:first');
-			$active.addClass('last-active');
-			$next.css({opacity: 0.0})
-			    .addClass('active')
-			    .animate({opacity: 1.0}, 1000, function() {
-			        $active.removeClass('active last-active');
-			    });
-		}
-      window.addEventListener('DOMContentLoaded', function(){
-		    setInterval( "slideSwitch()", 5000 );
-		});
-
-	</script>
-
-    <!-- ＃リンクのスムーズスクロール -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function(){
-        $('a[href^="#"]').click(function() {
-          var speed = 500;
-          var href= $(this).attr("href");
-          var target = $(href == "#" || href == "" ? 'html' : href);
-          var position = target.offset().top;
-          $('body,html').animate({scrollTop:position}, speed, 'swing');
-          return false;
-        });
-      });
-    </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/sl.js"></script>
   <script src="js/hb.js"></script>
   <script src="js/font_animation.js"></script>
 
