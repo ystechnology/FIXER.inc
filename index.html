@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
 
     <!-- ＃リンクのスムーズスクロール -->
     <script>
@@ -24,155 +26,155 @@
       });
     </script>
 
-  <title>FIXER.inc</title>
+  <title>FIXER株式会社</title>
 </head>
 <body>
 
   <div id="global-container">
     <div id="container">
-
       <div class="mobile-menu__cover"></div>
         <header class="header">
           <div class="header_logo">
-            FIXER.inc
+            FIXER株式会社
           </div>
           <nav class="header_nav">
             <ul class="header_ul">
-              <li class="header_li item"><a href="#1">About</a></li>
-              <li class="header_li item"><a href="#2">Service</a></li>
+              <!-- <li class="header_li item"><a href="#1">About</a></li> -->
+              <li class="header_li item"><a href="#1">Service</a></li>
               <li class="header_li item">
-                <a class="btn filled" href="#3">Company</a>
+                <a class="btn filled" href="#2">About</a>
               </li>
             </ul>
           </nav>
-          <button class="mobile-menu__btn">
+          <!-- <button class="mobile-menu__btn">
             <span></span>
             <span></span>
             <span></span>
-          </button>
+          </button> -->
         </header>
 
-    <div class="cop">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/fv_01.jpg" alt="">
+      <div class="cop">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/fv2_01.jpg" width="100%" height="600" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv2_02.jpg" width="100%" height="600" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv2_03.jpg" width="100%" height="600" alt="">
+              </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+      </div>
+        <!-- <div class="cop_fv">
+          Follow your dream
+        </div> -->
+        <!-- <div class="cop_text">
+          We influence and change the world
+        </div> -->
+      </div>
+
+      <div id="1">
+        <div class="service">
+          <div class="service_fv">
+            <h1><span class="big">S</span>ervice
+          </div>
+
+          <div class="service_content">
+            <div class="service_title">
+              貿易事業
             </div>
-            <div class="swiper-slide">
-              <img src="img/FV_02.jpg" alt="">
+            <div class="service_img hover-d">
+              <img  class="img_move" src="../img/s_01.jpg" alt="貿易関係の画像です">
             </div>
-            <div class="swiper-slide">
-              <img src="img/FV_03.jpg" alt="">
+            <div class="data-scrol service_text">
+              <i class="fas fa-luggage-cart"></i>　<span class="f_a">卸・小売事業</span><br><br>
+              ヨーロッパ(イタリア・フランス)を中心に
+              アパレルブランド品(服、靴、鞄)を展開。<br>
+              商品の充実度、体制を整えお客様へ最適なサービスを提供します。<br>
+              <br>
+            </div>
+          </div>
+
+            <div class="data-scrol service_content">
+              <div class="service_title">
+                広告代理事業
+              </div>
+              <div class="service_img hover-d">
+                <img class="img_move"  src="../img/s_02.jpg" alt="広告事業の画像が入ります">
+              </div>
+              <div class="service_text">
+                <i class="fas fa-users-cog"></i>　<span class="t_a">webマーケティング</span><br><br>
+                お客様の課題を明確化し、最適なソリューションを提供します。<br><br>
+                ・リスティング広告<br>
+                ・SEOコンサル<br>
+                ・AD広告<br>
+                ・インフルエンサー事業
+                ・インフルエンサー及びモデルのキャスティング
+              </div>
             </div>
         </div>
-        <!-- pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-    </div>
-      <!-- <div class="cop_fv">
-        Follow your dream
-      </div> -->
-      <!-- <div class="cop_text">
-        We influence and change the world
-      </div> -->
-    </div>
-
-    <div id="1">
-    <div class="about">
-      <div class="about_fv">
-        <h1><span class="big">A</span>bout</h1>
       </div>
-      <div class="about_detail">
-        <div class="about_img">
-          <img src="../img/about_01.jpg" width="90%" alt="">
-        </div>
-        <div class="about_title">
-          まだ世の中にはない価値を作り出す
-          <div class="about_title--text">
-            今までにないサービスを展開していき<br>
-            世の中に影響を与える私たちは<br>
-            2つの軸でサービスを展開しております
+
+      <div id="2">
+        <div class="detail">
+          <div class="detail_fv">
+            <h1><span class="big">A</span>bout</h1>
+          </div>
+          <div class="detail_text">
+              名称　　　　FIXER.inc</br>
+              設立　　　　2020年4月</br>
+              代表番号　　03-6860-3489</br>
+              本社　　　　〒150-0012</br>
+              　　　　　　東京都港区芝大門2-1-18GSハイム芝大門708</br>
+              代表取締役　岩切大和</br>
+              事業内容　　貿易事業/インターネット広告/キャスティング</br>
+              主要銀行　　みずほ銀行
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="2">
-    <div class="service">
-      <div class="service_fv">
-        <h1><span class="big">S</span>ervice
-      </div>
-
-      <div class="service_content">
-        <div class="service_title">
-          貿易事業
-        </div>
-        <div class="service_img hover-d">
-          <img  class="img_move" src="../img/s_01.jpg" alt="貿易関係の画像です">
-        </div>
-        <div class="service_text">
-          <i class="fas fa-luggage-cart"></i>　<span class="f_a">卸・小売事業</span><br><br>
-          ヨーロッパ(イタリア・フランス)を中心に
-          アパレルブランド品(服、靴、鞄)を展開。<br>
-          商品の充実度、体制を整えお客様へ最適なサービスを提供します。<br>
-          <br>
-        </div>
-      </div>
-
-        <div class="service_content">
-          <div class="service_title">
-            広告代理事業
+      <!-- <div id="1">
+        <div class="about">
+          <div class="about_fv">
+            <h1><span class="big">A</span>bout</h1>
           </div>
-          <div class="service_img hover-d">
-            <img class="img_move"  src="../img/s_02.jpg" alt="広告事業の画像が入ります">
-          </div>
-          <div class="service_text">
-            <i class="fas fa-users-cog"></i>　<span class="t_a">webマーケティング</span><br><br>
-            お客様の課題を明確化し、最適なソリューションを提供します。<br><br>
-            ・リスティング広告<br>
-            ・SEOコンサル<br>
-            ・AD広告<br>
-            ・インフルエンサー事業
-            ・インフルエンサー及びモデルのキャスティング
+          <div class="about_detail">
+            <div class="about_img">
+              <img src="../img/about_01.jpg" width="90%" alt="">
+            </div>
+            <div class="about_title">
+              まだ世の中にはない価値を作り出す
+              <div class="about_title--text">
+                今までにないサービスを展開していき<br>
+                世の中に影響を与える私たちは<br>
+                2つの軸でサービスを展開しております
+              </div>
+            </div>
           </div>
         </div>
-    </div>
-  </div>
+        </div> -->
 
-  <div id="3">
-    <div class="detail">
-      <div class="detail_fv">
-        <h1><span class="big">C</span>ompany</h1>
-      </div>
-      <div class="detail_text">
-          名称　　　　FIXER.inc</br>
-          設立　　　　2020年4月</br>
-          代表番号　　03-6860-3489</br>
-          本社　　　　〒150-0012</br>
-          　　　　　　東京都港区芝大門2-1-18GSハイム芝大門708</br>
-          代表取締役　岩切大和</br>
-          事業内容　　貿易事業/インターネット広告/キャスティング</br>
-          主要銀行　　みずほ銀行
-      </div>
-    </div>
-  </div>
-
-    <div class="footer">
-      <div class="footer_content">
-        <div class="footer_title">
-          FIXER.inc
+      <div class="footer">
+        <div class="footer_content">
+          <div class="footer_title">
+            FIXER.inc
+          </div>
+          <ul class="nav">
+            <!-- <li><a href="#1">About</a></li> -->
+            <li><a href="#1">Service</a></li>
+            <li><a href="#2">About</a></li>
+          </ul>
         </div>
-        <ul class="nav">
-          <li><a href="#1">About</a></li>
-          <li><a href="#2">Service</a></li>
-          <li><a href="#3">Company</a></li>
-        </ul>
+        <div class="footer_right">COPYRIGHT 2020 © FIXER.inc ALL RIGHTS RESERVED</div>
       </div>
     </div>
-  </div>
 
   <!----------------------モバイルメニュー----------------------->
-  <nav class="mobile-menu">
+  <!-- <nav class="mobile-menu">
     <ul class="mobile-menu__main">
       <li class="mobile-menu__item">
         <a class="mobile-menu__link" href="#1">
@@ -193,16 +195,17 @@
           </a>
       </li>
     </ul>
-  </nav>
-</div>
+  </nav> -->
+  </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/sl.js"></script>
   <script src="js/hb.js"></script>
-  <script src="js/font_animation.js"></script>
   <script src="js/scroll-polyfill.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/font_animation.js"></script>
+
 
 
 </body>

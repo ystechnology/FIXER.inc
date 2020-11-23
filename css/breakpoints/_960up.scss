@@ -4,17 +4,26 @@ Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
 
-header {
-  height: 100px;
-  line-height: 100px;
+
+.header {
   .header_logo {
-    padding-left: 20px;
+    width: 50%;
     font-size: 30px;
+    font-weight: bold;
   }
-  .header_menu {
-    padding-right: 50px;
+  .header_nav {
+    .header_ul {
+      display: flex;
+      line-height: 90px;
+      margin-right: 35px;
+      font-size: 20px;
+      .header_li {
+        margin-right: 20px;
+      }
+    }
   }
 }
+
 
 .cop {
   height: 100vh;
@@ -99,31 +108,13 @@ header {
   }
 }
 
-
 .footer {
   .footer_content {
     line-height: 40px;
-    margin-bottom: 50px;
+    padding-bottom: 70px;
   }
 }
 
 .big {
   font-size: 50px;
 }
-
-.header_ul {
-  display: flex;
-  .header_li {
-    margin-right: 30px;
-  }
-}
-
-.header_nav {
-  display: block;
-}
-
-.mobile-menu {
-  &__btn {
-      display: none;
-    }
-  }
