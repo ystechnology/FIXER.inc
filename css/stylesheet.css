@@ -49,12 +49,11 @@ body {
 
 .cop {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
 }
 
 .cop #slideshow {
   width: 100%;
-  height: 100%;
 }
 
 .about {
