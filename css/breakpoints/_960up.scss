@@ -124,7 +124,14 @@ Stylesheet: 960px以上のモニタで適用
   display: block;
 }
 
-
 .header_logo_sp {
+  display: none;
+}
+
+.cop_pc {
+  display: block;
+}
+
+.cop_sp {
   display: none;
 }
