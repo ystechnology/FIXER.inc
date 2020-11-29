@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
-  font-family: 'Castoro', serif;
+  font-family: "游ゴシック体", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
 }
 
 body {
@@ -25,13 +25,13 @@ body {
           justify-content: space-between;
 }
 
-.header .header_logo {
+.header .header_logo_sp {
   width: 50%;
-  line-height: 90px;
-  margin-left: 20px;
-  font-weight: bold;
   height: 90px;
-  width: 120px;
+  padding-left: 20px;
+  line-height: 90px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .header .header_nav .header_ul {
@@ -387,6 +387,10 @@ img {
   height: 100vh;
 }
 
+.header_logo_pc {
+  display: none;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -409,10 +413,11 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
-  .header .header_logo {
+  .header .header_logo_pc {
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
     width: 50%;
-    font-size: 30px;
-    font-weight: bold;
   }
   .header .header_nav .header_ul {
     display: -webkit-box;
@@ -505,6 +510,12 @@ Stylesheet: 960px以上のモニタで適用
   }
   .big {
     font-size: 50px;
+  }
+  .header_logo_pc {
+    display: block;
+  }
+  .header_logo_sp {
+    display: none;
   }
 }
 

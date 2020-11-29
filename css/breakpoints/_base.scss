@@ -9,7 +9,8 @@ $cBase:dimgray;
 $cBased:lightgray;
 
 html {
-  font-family: 'Castoro', serif;
+  font-family:  "游ゴシック体", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+
 }
   body {
     background-color: rgb(22, 21, 21);
@@ -24,13 +25,14 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    .header_logo {
+    .header_logo_sp {
       width: 50%;
-        line-height: 90px;
-        margin-left: 20px;
-        font-weight: bold;
-        height: 90px;
-        width: 120px;
+      height: 90px;
+      padding-left: 20px;
+      line-height: 90px;
+      font-weight: bold;
+      margin-bottom: 10px;
+
     }
     .header_nav {
       .header_ul {
@@ -316,6 +318,10 @@ img {
 
 .swiper-slide {
   height: 100vh;
+}
+
+.header_logo_pc {
+  display: none;
 }
 
 
